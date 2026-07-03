@@ -1,0 +1,33 @@
+Print "Yes" if the array is a palindrome.
+
+Print "No" otherwise.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int []a=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int l=0;
+        int r=n-1;
+        while(l<r)
+        {
+            if(a[l]!=a[r])
+            {
+                System.out.print("No");
+                return;
+            }
+            l++;
+            r--;
+        }
+        System.out.print("Yes");
+        
+    }
+}
